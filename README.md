@@ -1,7 +1,7 @@
 
 # New machine configuration
 - install oh-my-zsh https://github.com/robbyrussell/oh-my-zsh 
-- install chrome, dropbox, emacs 24.4+, sublime, rvm
+- install chrome, dropbox, emacs 24.4+, sublime, rvm, tmux
 - sudo apt-get install git vim docker docker-compose calibre
 - generate a ssh key to add to github (https://help.github.com/articles/generating-an-ssh-key)
 - run init.sh to clone repositories
@@ -10,6 +10,8 @@
   - take care when installing vim-plug. ~/.vim/autoload/plug.vim file must be readable without `sudo`
 - use prelude to config emacs
 
+if in macOS, install
+https://robots.thoughtbot.com/tmux-copy-paste-on-os-x-a-better-future
 thoughtbot dotfiles
 ===================
 
