@@ -19,7 +19,6 @@ set hlsearch
 map <Leader>h :noh<cr>
 set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
-set statusline+=%{fugitive#statusline()}
 
 " remove files from crlp
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/bower_components/*,*/node_modules/*,*/dist/*,*/vendor/*
@@ -194,6 +193,14 @@ else
   map <C-k> <C-w>k
   map <C-l> <C-w>l
 endif
+
+let g:tmuxline_preset = {
+      \'a'    : '#S',
+      \'b'    : '#F',
+      \'win'  : '#I #W',
+      \'cwin' : '#I #W',
+      \'y'    : '#(date)',
+      \'z'    : '%R'}
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")
