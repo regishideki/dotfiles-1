@@ -57,6 +57,7 @@ Plug 'tpope/vim-surround'
 Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/tComment'
 Plug 'joukevandermaas/vim-ember-hbs'
+Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'edkolev/tmuxline.vim'
 
