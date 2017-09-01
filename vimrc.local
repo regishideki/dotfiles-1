@@ -1,0 +1,50 @@
+set backspace=indent,eol,start
+set hlsearch
+map <Leader>h :noh<cr>
+set textwidth=120
+
+nnoremap <Leader>w :w!<CR>
+nnoremap <Leader>q :q!<CR>
+nnoremap <Leader>wq :wq!<CR>
+imap jj <Esc>
+
+map <Leader>i mmgg=G`m<CR>
+map <Leader>x :exec getline(".")<cr>
+
+" remove files from crlp
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/bower_components/*,*/node_modules/*,*/dist/*,*/vendor/*
+
+" permits navigates in requires as hyperlinks
+augroup rubypath
+  autocmd FileType ruby setlocal suffixesadd+=.rb
+  autocmd FileType ruby setlocal path+=~/workspace/bankfacil/core/**
+augroup END
+
+let g:tmuxline_preset = {
+      \'a'    : '#S',
+      \'b'    : '#F',
+      \'win'  : '#I #W',
+      \'cwin' : '#I #W',
+      \'y'    : '#(date)',
+      \'z'    : '%R'}
+
+if exists('$TMUX')
+  function! TmuxOrSplitSwitch(wincmd, tmuxdir)
+    let previous_winnr = winnr()
+    silent! execute "wincmd " . a:wincmd
+    if previous_winnr == winnr()
+      call system("tmux select-pane -" . a:tmuxdir)
+      redraw!
+    endif
+  endfunction
+
+  let previous_title = substitute(system("tmux display-message -p '#{pane_title}'"), '\n', '', '')
+  let &t_ti = "\<Esc>]2;vim\<Esc>\\" . &t_ti
+  let &t_te = "\<Esc>]2;". previous_title . "\<Esc>\\" . &t_te
+
+  nnoremap <silent> <C-h> :call TmuxOrSplitSwitch('h', 'L')<cr>
+  nnoremap <silent> <C-j> :call TmuxOrSplitSwitch('j', 'D')<cr>
+  nnoremap <silent> <C-k> :call TmuxOrSplitSwitch('k', 'U')<cr>
+  nnoremap <silent> <C-l> :call TmuxOrSplitSwitch('l', 'R')<cr>
+endif
+
