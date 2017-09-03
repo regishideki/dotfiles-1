@@ -12,6 +12,7 @@ map <Leader>i mmgg=G`m<CR>
 map <Leader>x :exec getline(".")<cr>
 
 map <C-n> :NERDTreeToggle<CR>
+map <leader>rr :NERDTreeFind<cr>
 
 " remove files from crlp
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/bower_components/*,*/node_modules/*,*/dist/*,*/vendor/*
@@ -49,4 +50,3 @@ if exists('$TMUX')
   nnoremap <silent> <C-k> :call TmuxOrSplitSwitch('k', 'U')<cr>
   nnoremap <silent> <C-l> :call TmuxOrSplitSwitch('l', 'R')<cr>
 endif
-
