@@ -1,13 +1,7 @@
 " Leader
 let mapleader = " "
 
-nnoremap <Leader>w :w!<CR>
-nnoremap <Leader>q :q!<CR>
-nnoremap <Leader>wq :wq!<CR>
-imap jj <Esc>
-
 set backspace=2   " Backspace deletes like most programs in insert mode
-set backspace=indent,eol,start
 set nobackup
 set nowritebackup
 set noswapfile    " http://robots.thoughtbot.com/post/18739402579/global-gitignore#comment-458413287
@@ -15,13 +9,8 @@ set history=50
 set ruler         " show the cursor position all the time
 set showcmd       " display incomplete commands
 set incsearch     " do incremental searching
-set hlsearch
-map <Leader>h :noh<cr>
 set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
-
-" remove files from crlp
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/bower_components/*,*/node_modules/*,*/dist/*,*/vendor/*
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
@@ -32,12 +21,6 @@ endif
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
-
-" permits navigates in requires as hyperlinks
-augroup rubypath
-  autocmd FileType ruby setlocal suffixesadd+=.rb
-  autocmd FileType ruby setlocal path+=~/workspace/bankfacil/core/**
-augroup END
 
 " Load matchit.vim, but only if the user hasn't installed a newer version.
 if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
@@ -96,7 +79,7 @@ if executable('ag')
   endif
 endif
 
-set textwidth=120
+set textwidth=80
 set colorcolumn=+1
 
 " Numbers
@@ -150,8 +133,6 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
-map <C-n> :NERDTreeToggle<CR>
-
 " configure syntastic syntax checking to check on open as well as save
 let g:syntastic_check_on_open=1
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
@@ -167,42 +148,6 @@ set complete+=kspell
 
 " Always use vertical diffs
 set diffopt+=vertical
-
-map <Leader>i mmgg=G`m<CR>
-map <Leader>x :exec getline(".")<cr>
-
-if exists('$TMUX')
-  function! TmuxOrSplitSwitch(wincmd, tmuxdir)
-    let previous_winnr = winnr()
-    silent! execute "wincmd " . a:wincmd
-    if previous_winnr == winnr()
-      call system("tmux select-pane -" . a:tmuxdir)
-      redraw!
-    endif
-  endfunction
-
-  let previous_title = substitute(system("tmux display-message -p '#{pane_title}'"), '\n', '', '')
-  let &t_ti = "\<Esc>]2;vim\<Esc>\\" . &t_ti
-  let &t_te = "\<Esc>]2;". previous_title . "\<Esc>\\" . &t_te
-
-  nnoremap <silent> <C-h> :call TmuxOrSplitSwitch('h', 'L')<cr>
-  nnoremap <silent> <C-j> :call TmuxOrSplitSwitch('j', 'D')<cr>
-  nnoremap <silent> <C-k> :call TmuxOrSplitSwitch('k', 'U')<cr>
-  nnoremap <silent> <C-l> :call TmuxOrSplitSwitch('l', 'R')<cr>
-else
-  map <C-h> <C-w>h
-  map <C-j> <C-w>j
-  map <C-k> <C-w>k
-  map <C-l> <C-w>l
-endif
-
-let g:tmuxline_preset = {
-      \'a'    : '#S',
-      \'b'    : '#F',
-      \'win'  : '#I #W',
-      \'cwin' : '#I #W',
-      \'y'    : '#(date)',
-      \'z'    : '%R'}
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")
