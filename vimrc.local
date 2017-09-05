@@ -14,6 +14,14 @@ map <Leader>x :exec getline(".")<cr>
 map <C-n> :NERDTreeToggle<CR>
 map <leader>rr :NERDTreeFind<cr>
 
+" automatically rebalance windows on vim resize
+autocmd VimResized * :wincmd =
+
+" zoom a vim pane, <C-w>= to re-balance
+nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>
+nnoremap <leader>= :wincmd =<cr>
+
+
 " remove files from crlp
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/bower_components/*,*/node_modules/*,*/dist/*,*/vendor/*
 
