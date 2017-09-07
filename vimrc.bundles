@@ -60,6 +60,7 @@ Plug 'joukevandermaas/vim-ember-hbs'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'edkolev/tmuxline.vim'
+Plug 'christoomey/vim-tmux-runner'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local

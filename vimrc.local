@@ -21,6 +21,10 @@ autocmd VimResized * :wincmd =
 nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>
 nnoremap <leader>= :wincmd =<cr>
 
+nnoremap <leader>osr :VtrOpenRunner<CR>
+nnoremap <leader>va :VtrAttachToPane<CR>
+nnoremap <C-f> :VtrSendLinesToRunner<CR>
+nnoremap <leader>sc :VtrSendCommandToRunner<CR>
 
 " remove files from crlp
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/bower_components/*,*/node_modules/*,*/dist/*,*/vendor/*
