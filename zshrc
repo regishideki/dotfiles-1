@@ -39,6 +39,16 @@ _load_settings() {
 }
 _load_settings "$HOME/.zsh/configs"
 
+_not_inside_tmux() { [[ -z "$TMUX" ]] }
+
+ensure_tmux_is_running() {
+  if _not_inside_tmux; then
+    tat
+  fi
+}
+
+ensure_tmux_is_running
+
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
