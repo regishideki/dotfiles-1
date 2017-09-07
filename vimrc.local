@@ -26,6 +26,10 @@ nnoremap <leader>va :VtrAttachToPane<CR>
 nnoremap <C-f> :VtrSendLinesToRunner<CR>
 nnoremap <leader>sc :VtrSendCommandToRunner<CR>
 
+" use VtrSendCommand to use vim-rspec to run rspecs in a new windos
+let g:rspec_command = "VtrSendCommandToRunner! rspec {spec}"
+map <Leader>t :call RunNearestSpec()<CR>
+
 " remove files from crlp
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/bower_components/*,*/node_modules/*,*/dist/*,*/vendor/*
 
