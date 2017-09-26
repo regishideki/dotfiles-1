@@ -4,6 +4,9 @@ alias vimrc="vim ~/dotfiles/vimrc"
 alias tmuxconf="vim ~/dotfiles/tmux.conf"
 alias saliases="source ~/.aliases"
 
+alias anot="vim ~/Dropbox/Creditas/anotacoes"
+alias itv="vim ~/Dropbox/Creditas/interview"
+
 alias gs="git status"
 
 alias pl="cd ~/workspace/regis/programming-languages"
