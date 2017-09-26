@@ -8,6 +8,11 @@ nnoremap <Leader>q :q!<CR>
 nnoremap <Leader>wq :wq!<CR>
 imap jj <Esc>
 
+nnoremap <Leader><Right> <C-w>3>
+nnoremap <Leader><Left> <C-w>3<
+nnoremap <Leader><Up> <C-w>3+
+nnoremap <Leader><Down> <C-w>3-
+
 map <Leader>i mmgg=G`m<CR>
 map <Leader>x :exec getline(".")<cr>
 
