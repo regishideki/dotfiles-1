@@ -1,3 +1,13 @@
 [user]
   email = regis_hattori@yahoo.com.br
   name = Regis Hideki Hattori
+[alias]
+  loggraph = log --oneline --decorate --graph --all
+  logdetail = log --pretty=format:'%C(yellow)%h%C(reset) - %an [%C(green)%ar%C(reset)] %s'
+  loggrep = log -E -i --grep
+  logstring = log -S
+  logfile = log --
+  stashall = stash -u
+  unstage = reset
+  uncommit = reset --soft HEAD^
+  cm = commit -m
