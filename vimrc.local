@@ -86,3 +86,6 @@ if exists('$TMUX')
   nnoremap <silent> <C-k> :call TmuxOrSplitSwitch('k', 'U')<cr>
   nnoremap <silent> <C-l> :call TmuxOrSplitSwitch('l', 'R')<cr>
 endif
+
+" reduce default opdate time from 4s to 250ms (update signs in gitgutter, for example)
+set updatetime=250
