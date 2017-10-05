@@ -49,6 +49,10 @@ ensure_tmux_is_running() {
 
 ensure_tmux_is_running
 
+# .zshrc
+autoload -U promptinit; promptinit
+prompt pure
+
 # --files: List files that would be searched but do not search
 # # --no-ignore: Do not respect .gitignore, etc...
 # # --hidden: Search hidden files and folders

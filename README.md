@@ -9,9 +9,9 @@
   - take care renaming the project directory: git clone git://github.com/regishideki/dotfiles-1.git ~/dotfiles 
   - take care when installing vim-plug. ~/.vim/autoload/plug.vim file must be readable without `sudo`
 - use prelude to config emacs
-
+- install https://github.com/sindresorhus/pure
 if in macOS, install
-https://robots.thoughtbot.com/tmux-copy-paste-on-os-x-a-better-future
+- https://robots.thoughtbot.com/tmux-copy-paste-on-os-x-a-better-future
 thoughtbot dotfiles
 ===================
 
