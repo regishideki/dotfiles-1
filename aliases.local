@@ -3,6 +3,7 @@ alias gitconfig="vim ~/dotfiles/gitconfig.local"
 alias vimrc="vim ~/dotfiles/vimrc"
 alias tmuxconf="vim ~/dotfiles/tmux.conf"
 alias saliases="source ~/.aliases"
+alias sz="source ~/.zshrc"
 
 alias anot="vim ~/Dropbox/Creditas/anotacoes"
 alias itv="vim ~/Dropbox/Creditas/interview"
