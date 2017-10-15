@@ -87,5 +87,8 @@ if exists('$TMUX')
   nnoremap <silent> <C-l> :call TmuxOrSplitSwitch('l', 'R')<cr>
 endif
 
+let g:markdown_fenced_languages = ['ruby']
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
 " reduce default opdate time from 4s to 250ms (update signs in gitgutter, for example)
 set updatetime=250
