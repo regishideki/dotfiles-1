@@ -89,3 +89,10 @@ endif
 
 " reduce default opdate time from 4s to 250ms (update signs in gitgutter, for example)
 set updatetime=250
+
+" install pathogen
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+
+let g:UltiSnipsSnippetsDir = '~/dotfiles/UltiSnips'
