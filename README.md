@@ -12,6 +12,8 @@
 - install https://github.com/sindresorhus/pure
 if in macOS, install
 - https://robots.thoughtbot.com/tmux-copy-paste-on-os-x-a-better-future
+- install vim-pathogen, ultisnips + vim-snippets
+
 thoughtbot dotfiles
 ===================
 
