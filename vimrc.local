@@ -95,4 +95,7 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
-let g:UltiSnipsSnippetsDir = '~/dotfiles/UltiSnips'
+if isdirectory('/Users/regishattori/dotfiles/UltiSnips')
+  let g:UltiSnipsSnippetsDir = '/Users/regishattori/dotfiles/UltiSnips'
+  let g:UltiSnipsSnippetDirectories = ['/Users/regishattori/dotfiles/UltiSnips']
+endif
