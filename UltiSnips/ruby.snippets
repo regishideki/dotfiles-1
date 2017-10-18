@@ -1,3 +1,11 @@
-snippet pry
-require 'pry'; binding.pry
+snippet pri
+require 'pri'; binding.pry
+endsnippet
+
+snippet fg "FactoryGirl.create(:factory)"
+FactoryGirl.create(:${1:factory})
+endsnippet
+
+snippet fgv "FactoryGirl.create(:factory)"
+${1:variable} = FactoryGirl.create(:${2:factory})
 endsnippet
