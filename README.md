@@ -1,6 +1,7 @@
 
 # New machine configuration
-- install oh-my-zsh https://github.com/robbyrussell/oh-my-zsh 
+- install oh-my-zsh https://github.com/robbyrussell/oh-my-zsh
+- install https://github.com/sindresorhus/pure
 - install chrome, dropbox, emacs 24.4+, sublime, rvm, tmux
 - sudo apt-get install git vim docker docker-compose calibre
 - generate a ssh key to add to github (https://help.github.com/articles/generating-an-ssh-key)
@@ -8,11 +9,13 @@
 - use this repo to config other dotfiles. 
   - take care renaming the project directory: git clone git://github.com/regishideki/dotfiles-1.git ~/dotfiles 
   - take care when installing vim-plug. ~/.vim/autoload/plug.vim file must be readable without `sudo`
+- install fzf and rg: https://medium.com/@crashybang/supercharge-vim-with-fzf-and-ripgrep-d4661fc853d2
+- install vim-pathogen, ultisnips + vim-snippets
 - use prelude to config emacs
-- install https://github.com/sindresorhus/pure
+
 if in macOS, install
 - https://robots.thoughtbot.com/tmux-copy-paste-on-os-x-a-better-future
-- install vim-pathogen, ultisnips + vim-snippets
+
 
 thoughtbot dotfiles
 ===================
