@@ -15,6 +15,7 @@ nnoremap <Leader><Down> <C-w>3-
 
 map <Leader>i mmgg=G`m<CR>
 map <Leader>x :exec getline(".")<cr>
+map <Leader>ss :%s/
 
 map <C-n> :NERDTreeToggle<CR>
 map <leader>rr :NERDTreeFind<cr>
@@ -99,3 +100,10 @@ if isdirectory('/Users/regishattori/dotfiles/UltiSnips')
   let g:UltiSnipsSnippetsDir = '/Users/regishattori/dotfiles/UltiSnips'
   let g:UltiSnipsSnippetDirectories = ['/Users/regishattori/dotfiles/UltiSnips']
 endif
+
+let test#strategy = "tslime"
+let g:tslime_always_current_session = 1
+let g:tslime_always_current_window = 1
+vmap <C-c><C-c> <Plug>SendSelectionToTmux
+nmap <C-c><C-c> <Plug>NormalModeSendToTmux
+nmap <C-c>r <Plug>SetTmuxVars
