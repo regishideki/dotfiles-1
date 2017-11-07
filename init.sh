@@ -16,7 +16,7 @@ clone_from_projects() {
   for project in "${projects[@]}"
   do
     if [ -d "$workspace/$project" ]; then
-      echo "Projet $project already exists."
+      echo "Project $project already exists."
     else
       echo "cloning project $project."
       git clone "git@github.com:$github_user/$project.git"
@@ -31,9 +31,9 @@ bankfacil_workspace="$workspace/bankfacil"
 mkdir -p $personal_workspace
 mkdir -p $bankfacil_workspace
 
-config_projects=(dotfiles-1 prelude)
+config_projects=(dotfiles prelude)
 personal_projects=(programming-challenges presentations project_euler programming-languages)
-bankfacil_projects=(core operational provisioning front middle-office ember-cli-bkf-core provisioning-dev qa-functional-specs docker-dev)
+bankfacil_projects=(core provisioning front middle-office ember-cli-bkf-core provisioning-dev qa-functional-specs docker-dev)
 
 personal_github="regishideki"
 bankfacil_github="BankFacil"
@@ -42,4 +42,6 @@ clone_from_projects $personal_workspace $personal_github $personal_projects
 clone_from_projects $bankfacil_workspace $bankfacil_github $bankfacil_projects
 clone_from_projects ~/ $personal_github $config_projects
 
-cd personal_workspace/dotfiles-1
+cp ~/dotfiles/core/projections.json $bankfacil_workspace/core/.projections.json
+
+cd ~/dotfiles/
