@@ -4,7 +4,13 @@
   },
 
   "spec/domain/*_spec.rb": {
-    "alternate": "domain/{}.rb"
+    "alternate": "domain/{}.rb",
+    "template": [
+      "require '{}'",
+      "",
+      "describe {capitalize|camelcase|colons} do",
+      "end"
+    ]
   },
 
   "domain/*_repository.rb": {
@@ -12,7 +18,13 @@
   },
 
   "spec/repositories/*_repository_spec.rb": {
-    "alternate": "domain/{}_repository.rb"
+    "alternate": "domain/{}_repository.rb",
+    "template": [
+      "require 'acceptance_helper'",
+      "",
+      "describe {capitalize|camelcase|colons}Repository do",
+      "end"
+    ]
   },
 
   "apps/web/api/*.rb": {
@@ -20,31 +32,27 @@
   },
 
   "spec/api/*_spec.rb": {
-    "alternate": "apps/web/api/{}.rb"
+    "alternate": "apps/web/api/{}.rb",
+    "template": [
+      "require 'acceptance_helper'",
+      "",
+      "describe Api::{capitalize|camelcase|colons} do",
+      "end"
+    ]
   },
 
-  "apps/web/form_object/*.rb": {
-    "alternate": "spec/form_object/{}_spec.rb"
+  "apps/web/*.rb": {
+    "alternate": "spec/{}_spec.rb"
   },
 
-  "spec/form_object/*_spec.rb": {
-    "alternate": "apps/web/form_object/{}.rb"
-  },
-
-  "apps/web/validations/*.rb": {
-    "alternate": "spec/validations/{}_spec.rb"
-  },
-
-  "spec/validations/*_spec.rb": {
-    "alternate": "apps/web/validations/{}.rb"
-  },
-
-  "apps/web/representers/*.rb": {
-    "alternate": "spec/representers/{}_spec.rb"
-  },
-
-  "spec/representers/*_spec.rb": {
-    "alternate": "apps/web/representers/{}.rb"
+  "spec/*_spec.rb": {
+    "alternate": "apps/web/{}.rb",
+    "template": [
+      "require '{}'",
+      "",
+      "describe {capitalize|camelcase|colons} do",
+      "end"
+    ]
   },
 
   "boundaries/*.rb": {
@@ -52,6 +60,12 @@
   },
 
   "spec/boundaries/*_spec.rb": {
-    "alternate": "boundaries/{}.rb"
+    "alternate": "boundaries/{}.rb",
+    "template": [
+      "require '{}'",
+      "",
+      "describe {capitalize|camelcase|colons} do",
+      "end"
+    ]
   }
 }
