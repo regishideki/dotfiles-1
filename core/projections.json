@@ -1,0 +1,57 @@
+{
+  "domain/*.rb": {
+    "alternate": "spec/domain/{}_spec.rb"
+  },
+
+  "spec/domain/*_spec.rb": {
+    "alternate": "domain/{}.rb"
+  },
+
+  "domain/*_repository.rb": {
+    "alternate": "spec/repositories/{}_repository_spec.rb"
+  },
+
+  "spec/repositories/*_repository_spec.rb": {
+    "alternate": "domain/{}_repository.rb"
+  },
+
+  "apps/web/api/*.rb": {
+    "alternate": "spec/api/{}_spec.rb"
+  },
+
+  "spec/api/*_spec.rb": {
+    "alternate": "apps/web/api/{}.rb"
+  },
+
+  "apps/web/form_object/*.rb": {
+    "alternate": "spec/form_object/{}_spec.rb"
+  },
+
+  "spec/form_object/*_spec.rb": {
+    "alternate": "apps/web/form_object/{}.rb"
+  },
+
+  "apps/web/validations/*.rb": {
+    "alternate": "spec/validations/{}_spec.rb"
+  },
+
+  "spec/validations/*_spec.rb": {
+    "alternate": "apps/web/validations/{}.rb"
+  },
+
+  "apps/web/representers/*.rb": {
+    "alternate": "spec/representers/{}_spec.rb"
+  },
+
+  "spec/representers/*_spec.rb": {
+    "alternate": "apps/web/representers/{}.rb"
+  },
+
+  "boundaries/*.rb": {
+    "alternate": "spec/boundaries/{}_spec.rb"
+  },
+
+  "spec/boundaries/*_spec.rb": {
+    "alternate": "boundaries/{}.rb"
+  }
+}
