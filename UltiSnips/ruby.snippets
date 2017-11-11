@@ -1,3 +1,7 @@
+global !p
+from snippet_helpers import *
+endglobal
+
 snippet pry
 require 'pry'; binding.pry
 endsnippet
@@ -6,6 +10,10 @@ snippet fg "FactoryGirl.create(:factory)"
 FactoryGirl.create(:${1:factory})
 endsnippet
 
-snippet fgv "FactoryGirl.create(:factory)"
-${1:variable} = FactoryGirl.create(:${2:factory})
+snippet fgv "FactoryGirl.create(:factory)bla"
+`!p snip.rv = last_snake_case_word(t[1])` = FactoryGirl.create(:${1:factory_name})
+endsnippet
+
+snippet ov "@variable = overrides.fetch(:varialbe) {}"
+@${1:variable} = overrides.fetch(:$1) { $0 }
 endsnippet
