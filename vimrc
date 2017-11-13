@@ -86,9 +86,6 @@ set colorcolumn=+1
 set number
 set numberwidth=5
 
-" Switch between the last two files
-nnoremap <leader><leader> <c-^>
-
 " Get off my lawn
 nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>

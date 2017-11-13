@@ -123,7 +123,6 @@ endfunction
 autocmd BufWritePre *.rb,*.js :call <SID>StripTrailingWhitespaces()
 
 " change from test to production code and vice-versa using projectionist
-nnoremap <C-a> :A<CR>
+nnoremap <leader><leader> :A<CR>
 
-" using CamelCaseMotion plugin
-call camelcasemotion#CreateMotionMappings('<leader>')
+nnoremap src :source $MYVIMRC<cr>
