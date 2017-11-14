@@ -126,3 +126,6 @@ autocmd BufWritePre *.rb,*.js :call <SID>StripTrailingWhitespaces()
 nnoremap <leader><leader> :A<CR>
 
 nnoremap src :source $MYVIMRC<cr>
+
+" Use Gundo to manage history
+nnoremap <F5> :GundoToggle<CR>
