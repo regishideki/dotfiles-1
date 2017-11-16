@@ -129,3 +129,6 @@ nnoremap src :source $MYVIMRC<cr>
 
 " Use Gundo to manage history
 nnoremap <F5> :GundoToggle<CR>
+
+" delete fugitive buffers automatically
+autocmd BufReadPost fugitive://* set bufhidden=delete
