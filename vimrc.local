@@ -112,3 +112,8 @@ nnoremap src :source $MYVIMRC<cr>
 nnoremap <F5> :GundoToggle<CR>
 
 nnoremap <leader>f :Files<cr>
+
+"Use MRU as default in CtrlP
+let g:ctrlp_map='<c-p>'
+let g:ctrlp_cmd='CtrlPMRU'
+let g:ctrlp_mruf_relative = 1 " search only in project - without it, it will search from $HOME =(
