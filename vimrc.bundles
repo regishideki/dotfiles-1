@@ -69,6 +69,7 @@ Plug 'christoomey/vim-conflicted'
 Plug 'jgdavey/tslime.vim'
 Plug 'bkad/CamelCaseMotion'
 Plug 'sjl/gundo.vim'
+Plug 'dustinfarris/vim-htmlbars-inline-syntax'
 Plug 'tpope/vim-abolish'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
