@@ -134,3 +134,5 @@ nnoremap <F5> :GundoToggle<CR>
 autocmd BufReadPost fugitive://* set bufhidden=delete
 
 autocmd BufRead,BufNewFile *.js HighlightInlineHbs
+
+set nofoldenable
