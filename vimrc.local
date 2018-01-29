@@ -117,3 +117,10 @@ nnoremap <leader>f :Files<cr>
 let g:ctrlp_map='<c-p>'
 let g:ctrlp_cmd='CtrlPMRU'
 let g:ctrlp_mruf_relative = 1 " search only in project - without it, it will search from $HOME =(
+
+" delete fugitive buffers automatically
+autocmd BufReadPost fugitive://* set bufhidden=delete
+
+autocmd BufRead,BufNewFile *.js HighlightInlineHbs
+
+set nofoldenable
