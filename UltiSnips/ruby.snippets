@@ -17,3 +17,9 @@ endsnippet
 snippet ov "@variable = overrides.fetch(:varialbe) {}"
 @${1:variable} = overrides.fetch(:$1) { $0 }
 endsnippet
+
+snippet context "context wrapper"
+context '$1' do
+  ${0:${VISUAL:# assertions}}
+end
+endsnippet
