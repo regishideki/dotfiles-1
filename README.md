@@ -7,7 +7,7 @@
 - install https://github.com/sindresorhus/pure
 
 - run init.sh to clone repositories
-- use this repo to config other dotfiles(instructions on how to install recup is in the section below)
+- use this repo to config other dotfiles(instructions on how to install rcm is in the section below)
   - take care when installing vim-plug. ~/.vim/autoload/plug.vim file must be readable without `sudo`
 - install fzf and rg: https://medium.com/@crashybang/supercharge-vim-with-fzf-and-ripgrep-d4661fc853d2
 - install vim-pathogen, ultisnips + vim-snippets
