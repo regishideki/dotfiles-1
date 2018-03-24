@@ -4,14 +4,14 @@
 - sudo apt-get install git vim docker docker-compose calibre
 - install [vim-plug](https://github.com/junegunn/vim-plug) and [pathogen](https://github.com/tpope/vim-pathogen)
 - install rvm, tmux
-- install oh-my-zsh https://github.com/robbyrussell/oh-my-zsh
+- install zsh + oh-my-zsh https://github.com/robbyrussell/oh-my-zsh and use zsh as default shell
 - install https://github.com/sindresorhus/pure
 
 - run init.sh to clone repositories
 - use this repo to config other dotfiles(instructions on how to install rcm is in the section below)
   - take care when installing vim-plug. ~/.vim/autoload/plug.vim file must be readable without `sudo`
 - install fzf and rg: https://medium.com/@crashybang/supercharge-vim-with-fzf-and-ripgrep-d4661fc853d2
-- install vim-pathogen, ultisnips + vim-snippets
+- install ultisnips + vim-snippets
 
 if in macOS, install
 - https://robots.thoughtbot.com/tmux-copy-paste-on-os-x-a-better-future
