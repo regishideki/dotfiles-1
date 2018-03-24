@@ -2,6 +2,7 @@
 - install chrome, dropbox
 - generate a ssh key to add to github (https://help.github.com/articles/generating-an-ssh-key)
 - sudo apt-get install git vim docker docker-compose calibre
+- install [vim-plug](https://github.com/junegunn/vim-plug) and [pathogen](https://github.com/tpope/vim-pathogen)
 - install rvm, tmux
 - install oh-my-zsh https://github.com/robbyrussell/oh-my-zsh
 - install https://github.com/sindresorhus/pure
