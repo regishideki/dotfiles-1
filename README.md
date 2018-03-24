@@ -16,10 +16,12 @@
 if in macOS, install
 - https://robots.thoughtbot.com/tmux-copy-paste-on-os-x-a-better-future
 
-if in linux, remap keyboard. Those commands will work this way: if you press Ctrl twice, it will act like Esc. If you hold, it will act like Ctrl
+- remap caps lock (https://askubuntu.com/questions/177824/remapping-caps-lock-to-control-and-escape-not-the-usual-way/228379)
 sudo apt-get install xcape
+in zshrc.local there are already those lines of code:
 /usr/bin/setxkbmap -option 'caps:ctrl_modifier'
 /usr/bin/xcape -e 'Caps_Lock=Escape' -t 100
+those commands will work this way: if you press Ctrl twice, it will act like Esc. If you hold, it will act like Ctrl:
 
 thoughtbot dotfiles
 ===================
