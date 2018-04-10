@@ -1,21 +1,27 @@
-
 # New machine configuration
-- install oh-my-zsh https://github.com/robbyrussell/oh-my-zsh
-- install https://github.com/sindresorhus/pure
-- install chrome, dropbox, emacs 24.4+, sublime, rvm, tmux
-- sudo apt-get install git vim docker docker-compose calibre
+- install chrome, dropbox
 - generate a ssh key to add to github (https://help.github.com/articles/generating-an-ssh-key)
+- sudo apt-get install git vim docker docker-compose calibre
+- install [vim-plug](https://github.com/junegunn/vim-plug) and [pathogen](https://github.com/tpope/vim-pathogen)
+- install rvm, tmux
+- install zsh + oh-my-zsh https://github.com/robbyrussell/oh-my-zsh and use zsh as default shell
+- install https://github.com/sindresorhus/pure
+
 - run init.sh to clone repositories
-- use this repo to config other dotfiles. 
-  - take care renaming the project directory: git clone git://github.com/regishideki/dotfiles-1.git ~/dotfiles 
+- use this repo to config other dotfiles(instructions on how to install rcm is in the section below)
   - take care when installing vim-plug. ~/.vim/autoload/plug.vim file must be readable without `sudo`
 - install fzf and rg: https://medium.com/@crashybang/supercharge-vim-with-fzf-and-ripgrep-d4661fc853d2
-- install vim-pathogen, ultisnips + vim-snippets
-- use prelude to config emacs
+- install ultisnips + vim-snippets
 
 if in macOS, install
 - https://robots.thoughtbot.com/tmux-copy-paste-on-os-x-a-better-future
 
+- remap caps lock (https://askubuntu.com/questions/177824/remapping-caps-lock-to-control-and-escape-not-the-usual-way/228379)
+sudo apt-get install xcape
+in zshrc.local there are already those lines of code:
+/usr/bin/setxkbmap -option 'caps:ctrl_modifier'
+/usr/bin/xcape -e 'Caps_Lock=Escape' -t 100
+those commands will work this way: if you press Ctrl twice, it will act like Esc. If you hold, it will act like Ctrl:
 
 thoughtbot dotfiles
 ===================
