@@ -2,6 +2,9 @@
 - install chrome, dropbox
 - generate a ssh key to add to github (https://help.github.com/articles/generating-an-ssh-key)
 - sudo apt-get install git vim docker docker-compose calibre
+- install vim with clipboard (for more details: http://vimcasts.org/blog/2013/11/getting-vim-with-clipboard-support/)
+  - if in Ubuntu: apt-get install vim-gnome
+  - if MacOS: brew install vim 
 - install [vim-plug](https://github.com/junegunn/vim-plug) and [pathogen](https://github.com/tpope/vim-pathogen)
 - install rvm, tmux
 - install zsh + oh-my-zsh https://github.com/robbyrussell/oh-my-zsh and use zsh as default shell
