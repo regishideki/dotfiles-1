@@ -48,3 +48,5 @@ ln ~/dotfiles/core/projections.json $bankfacil_workspace/core/.projections.json
 mkdir -p ~/.vim/pythonx
 ln ~/dotfiles/vim/pythonx/snippet_helpers.py ~/.vim/pythonx/snippet_helpers.py
 cd ~/dotfiles/
+
+git clone https://github.com/easymotion/vim-easymotion ~/.vim/bundle/vim-easymotion
