@@ -144,3 +144,7 @@ nnoremap <leader>F :FF<cr>
 let g:ctrlp_map='<c-p>'
 let g:ctrlp_cmd='CtrlPMRU'
 let g:ctrlp_mruf_relative = 1 " search only in project - without it, it will search from $HOME =(
+
+map ff <Plug>(easymotion-prefix)
+
+let g:ale_emit_conflict_warnings = 0
