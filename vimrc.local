@@ -130,21 +130,9 @@ nnoremap src :source $MYVIMRC<cr>
 " Use Gundo to manage history
 nnoremap <F5> :GundoToggle<CR>
 
-nnoremap <leader>f :Files<cr>
-nnoremap <leader>F :FF<cr>
-
-map ff <Plug>(easymotion-prefix)
-
-"Use MRU as default in CtrlP
-let g:ctrlp_map='<c-p>'
-let g:ctrlp_cmd='CtrlPMRU'
-let g:ctrlp_mruf_relative = 1 " search only in project - without it, it will search from $HOME =(
-
 " delete fugitive buffers automatically
 autocmd BufReadPost fugitive://* set bufhidden=delete
 
 autocmd BufRead,BufNewFile *.js HighlightInlineHbs
 
 set nofoldenable
-
-let g:ale_emit_conflict_warnings = 0
