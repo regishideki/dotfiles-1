@@ -27,6 +27,20 @@
     ]
   },
 
+  "boundaries/infra/closing/*_repository.rb": {
+    "alternate": "spec/repositories/closing/{}_repository_spec.rb"
+  },
+
+  "spec/repositories/closing/*_repository_spec.rb": {
+    "alternate": "boundaries/infra/closing/{}_repository.rb",
+    "template": [
+      "require 'acceptance_helper'",
+      "",
+      "describe {capitalize|camelcase|colons}Repository do",
+      "end"
+    ]
+  },
+
   "apps/web/api/*.rb": {
     "alternate": "spec/api/{}_spec.rb"
   },
