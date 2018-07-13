@@ -137,7 +137,7 @@ autocmd BufRead,BufNewFile *.js HighlightInlineHbs
 
 set nofoldenable
 
-nnoremap <leader>f :Files<cr>
+nnoremap <leader>f :GFiles<cr>
 nnoremap <leader>F :FF<cr>
 
 "Use MRU as default in CtrlP
