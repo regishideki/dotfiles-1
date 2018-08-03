@@ -74,6 +74,7 @@ Plug 'tpope/vim-abolish'
 Plug 'kana/vim-textobj-user' | Plug 'kana/vim-textobj-line'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'yssl/QFEnter'
+Plug 'sbdchd/neoformat'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local

@@ -59,6 +59,7 @@ augroup rubypath
   autocmd FileType ruby setlocal suffixesadd+=.rb
   autocmd FileType ruby setlocal path+=~/workspace/bankfacil/core/**
 augroup END
+autocmd BufWritePre *.js Neoformat
 
 let g:tmuxline_preset = {
       \'a'    : '#S',
