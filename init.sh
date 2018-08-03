@@ -50,3 +50,9 @@ ln ~/dotfiles/vim/pythonx/snippet_helpers.py ~/.vim/pythonx/snippet_helpers.py
 cd ~/dotfiles/
 
 git clone https://github.com/easymotion/vim-easymotion ~/.vim/bundle/vim-easymotion
+
+# It is necessary to use Neoformat
+yarn global add prettier
+
+prettier_path=$(which prettier)
+export PATH=$PATH:$prettier_path
