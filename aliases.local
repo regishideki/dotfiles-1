@@ -39,3 +39,14 @@ gitmerge() {
   git merge $1
 }
 
+function whouseport() {
+  port="$1"
+
+  lsof -nP -i4TCP:$port | grep LISTEN
+}
+
+function killwhouseport() {
+  port="$1"
+
+  kill $(lsof -nP -i4TCP:$port | grep LISTEN | awk '{print $2}')
+}
