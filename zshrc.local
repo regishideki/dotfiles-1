@@ -1,2 +1,5 @@
 /usr/bin/setxkbmap -option 'caps:ctrl_modifier'
 /usr/bin/xcape -e 'Caps_Lock=Escape' -t 100
+
+export MAVEN_HOME=/Users/regishattori/apache-maven-3.5.4
+export PATH=$PATH:$MAVEN_HOME/bin
