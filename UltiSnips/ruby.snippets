@@ -6,6 +6,10 @@ snippet pry
 require 'pry'; binding.pry
 endsnippet
 
+snippet sdc
+subject = described_class.new($0)
+endsnippet
+
 snippet fg "FactoryGirl.create(:factory)"
 FactoryGirl.create(:${1:factory})
 endsnippet
