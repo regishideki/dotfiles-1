@@ -45,6 +45,8 @@ clone_from_projects ~/ $personal_github $config_projects
 ln ~/dotfiles/zshrc.local $HOME/.zshrc.local
 
 ln ~/dotfiles/core/projections.json $bankfacil_workspace/core/.projections.json
+ln ~/dotfiles/journey/projections.json $bankfacil_workspace/journey/.projections.json
+
 mkdir -p ~/.vim/pythonx
 ln ~/dotfiles/vim/pythonx/snippet_helpers.py ~/.vim/pythonx/snippet_helpers.py
 cd ~/dotfiles/
