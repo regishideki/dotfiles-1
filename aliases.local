@@ -51,3 +51,15 @@ function killwhouseport() {
 
   kill $(lsof -nP -i4TCP:$port | grep LISTEN | awk '{print $2}')
 }
+
+function newJourneyDatabaseStagingAccess() {
+  export VAULT_ADDR=https://vault.stg.creditas.io
+  vault login -method=github
+  result=$(vault read journey/database/creds/dev-readonly)
+
+  username=$(echo $result | grep 'username' | awk '{print $2}')
+  password=$(echo $result | grep 'password' | awk '{print $2}')
+
+  echo $result
+  echo "string de conexão: postgres://$username:$password@db.api.journey.stg.creditas.io/journey"
+}

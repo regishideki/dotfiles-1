@@ -116,7 +116,7 @@ vmap <C-c><C-c> <Plug>SendSelectionToTmux
 nmap <C-c><C-c> <Plug>NormalModeSendToTmux
 
 function! VimTestJourney()
-  let g:test#ruby#rspec#executable='docker-compose run web bundle exec rspec'
+  let g:test#ruby#rspec#executable='docker-compose exec web bundle exec rspec'
 endfunction
 
 function! VimTestCore()
