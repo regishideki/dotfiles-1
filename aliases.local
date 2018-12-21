@@ -52,9 +52,13 @@ function killwhouseport() {
   kill $(lsof -nP -i4TCP:$port | grep LISTEN | awk '{print $2}')
 }
 
-function newJourneyDatabaseStagingAccess() {
+function vaultLogin() {
   export VAULT_ADDR=https://vault.stg.creditas.io
   vault login -method=github
+}
+
+function vaultNewJourneyDatabaseStagingAccess() {
+  export VAULT_ADDR=https://vault.stg.creditas.io
   result=$(vault read journey/database/creds/dev-readonly)
 
   username=$(echo $result | grep 'username' | awk '{print $2}')
