@@ -33,7 +33,7 @@ mkdir -p $bankfacil_workspace
 
 config_projects=(dotfiles prelude)
 personal_projects=(programming-challenges presentations project_euler programming-languages)
-bankfacil_projects=(core provisioning front middle-office ember-cli-bkf-core provisioning-dev qa-functional-specs docker-dev)
+bankfacil_projects=(core provisioning front middle-office ember-cli-bkf-core provisioning-dev qa-functional-specs docker-dev journey journey-v2 terraform-applications loan-operation-kotlin simulations)
 
 personal_github="regishideki"
 bankfacil_github="BankFacil"
@@ -48,10 +48,10 @@ ln ~/dotfiles/core/projections.json $bankfacil_workspace/core/.projections.json
 ln ~/dotfiles/journey/projections.json $bankfacil_workspace/journey/.projections.json
 
 mkdir -p ~/.vim/pythonx
-ln ~/dotfiles/vim/pythonx/snippet_helpers.py ~/.vim/pythonx/snippet_helpers.py
-cd ~/dotfiles/
+ln ~/dotfiles/vim/pythonx/snippet_helpers.py ~/.vim/pythonx/snippet_helpers.py cd ~/dotfiles/
+git clone https://github.com/easymotion/vim-easymotion ~/.vim/bundle
 
-git clone https://github.com/easymotion/vim-easymotion ~/.vim/bundle/vim-easymotion
+ln -s "$HOME/.vimrc" "$HOME/.ideavimrc"/vim-easymotion
 
 # It is necessary to use Neoformat
 yarn global add prettier
