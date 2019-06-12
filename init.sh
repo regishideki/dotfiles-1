@@ -36,7 +36,7 @@ personal_projects=(programming-challenges presentations project_euler programmin
 bankfacil_projects=(core provisioning front middle-office ember-cli-bkf-core provisioning-dev qa-functional-specs docker-dev journey journey-v2 terraform-applications loan-operation-kotlin simulations)
 
 personal_github="regishideki"
-bankfacil_github="BankFacil"
+bankfacil_github="Creditas"
 
 clone_from_projects $personal_workspace $personal_github $personal_projects
 clone_from_projects $bankfacil_workspace $bankfacil_github $bankfacil_projects
@@ -51,7 +51,7 @@ mkdir -p ~/.vim/pythonx
 ln ~/dotfiles/vim/pythonx/snippet_helpers.py ~/.vim/pythonx/snippet_helpers.py cd ~/dotfiles/
 git clone https://github.com/easymotion/vim-easymotion ~/.vim/bundle
 
-ln -s "$HOME/.vimrc" "$HOME/.ideavimrc"/vim-easymotion
+ln -s "$HOME/.vimrc" "$HOME/.ideavimrc"
 
 # It is necessary to use Neoformat
 yarn global add prettier
