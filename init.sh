@@ -47,6 +47,8 @@ ln ~/dotfiles/zshrc.local $HOME/.zshrc.local
 ln ~/dotfiles/core/projections.json $bankfacil_workspace/core/.projections.json
 ln ~/dotfiles/journey/projections.json $bankfacil_workspace/journey/.projections.json
 
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+  curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 mkdir -p ~/.vim/pythonx
 ln ~/dotfiles/vim/pythonx/snippet_helpers.py ~/.vim/pythonx/snippet_helpers.py cd ~/dotfiles/
 git clone https://github.com/easymotion/vim-easymotion ~/.vim/bundle
