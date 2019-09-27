@@ -1,3 +1,17 @@
 source ~/.vimrc
 
-nnoremap <C-j> :action ActivateTerminalToolWindow<CR>
+set surround
+set multiple-cursors
+
+nnoremap <leader>r :source ~/.ideavimrc<CR>
+nnoremap <C-t> :action ActivateTerminalToolWindow<CR>
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+nnoremap <C-h> <C-w>h
+
+nnoremap <leader>f :action SearchEverywhere<CR>
+
+nnoremap <leader><leader> :action GotoTest<CR>
+
+nnoremap <leader>ft :action RerunFailedTests<CR>
