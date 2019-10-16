@@ -1,0 +1,4 @@
+# bash
+## find the s3 objects in the bucket, get the 4th column (file name), select only those that starts with "1." and move
+them to a subfolder.
+aws s3 ls s3://regis-hattori-chora-ppt --recursive | awk '{print $4}' | grep '^1\.' | xargs -I{} aws s3 mv s3://regis-hattori-chora-ppt/{} s3://regis-hattori-chora-ppt/1-layout/{}
