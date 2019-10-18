@@ -1,0 +1,32 @@
+example video:
+https://www.youtube.com/watch?v=sav98y4EFzE&list=PLJG25HlmvsOWvVjF44qr5-xXG--cCuXnn&index=24&t=0s
+
+example text:
+https://github.com/nikku/camunda-modeler-plugins-talk-2019
+
+plugin folder:
+Linux:
+cd $XDG_CONFIG_HOME/camunda-modeler/resources/plugins 
+or
+cd ~/.config/camunda-modeler/resources/plugins
+
+MacOS:
+cd ~/Library/Application\ Support/camunda-modeler/resources/plugins
+
+install plugin:
+just git clone the repo in the plugin folder.
+In the example text, it uses npx + npm install. I am not sure if it is necessary only when we need to develop a plugin.
+git clone github:bpmn-io/bpmn-js-token-simulation-plugin
+git clone github:camunda/camunda-modeler-linter-plugin
+git clone git@github.com:umb/camunda-modeler-property-info-plugin.git
+
+
+
+workshop
+install plugin in plugin folder:
+npx degit github:camunda/camunda-modeler-linter-plugin camunda-modeler-linter-plugin
+
+
+
+enable plugin:
+modeler > plugins

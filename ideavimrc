@@ -1,17 +1,32 @@
 source ~/.vimrc
 
+" plugins
 set surround
 set multiple-cursors
 
 nnoremap <leader>r :source ~/.ideavimrc<CR>
+
 nnoremap <C-t> :action ActivateTerminalToolWindow<CR>
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <C-h> <C-w>h
 
+" options
+nnoremap cow :action EditorToggleUseSoftWraps<cr>
+
+" actions
 nnoremap <leader>f :action SearchEverywhere<CR>
 
+" tests
 nnoremap <leader><leader> :action GotoTest<CR>
-
 nnoremap <leader>ft :action RerunFailedTests<CR>
+nnoremap <leader>s :action Run<cr>
+nnoremap <leader>sd :action Debug<cr>
+
+" code refactoring
+nnoremap <space>rr :action RenameElement<cr>
+
+" built-in navigation to navigated items works better
+nnoremap <c-o> :action Back<cr>
+nnoremap <c-i> :action Forward<cr>
