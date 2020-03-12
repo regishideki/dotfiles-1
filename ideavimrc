@@ -28,5 +28,5 @@ nnoremap <leader>sd :action Debug<cr>
 nnoremap <space>rr :action RenameElement<cr>
 
 " built-in navigation to navigated items works better
-nnoremap <c-o> :action Back<cr>
-nnoremap <c-i> :action Forward<cr>
+nnoremap <C-o> :action Back<cr>
+nnoremap <C-i> :action Forward<cr>
