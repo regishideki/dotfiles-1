@@ -67,3 +67,9 @@ function vaultNewJourneyDatabaseStagingAccess() {
   echo $result
   echo "string de conexão: postgres://$username:$password@db.api.journey.stg.creditas.io/journey"
 }
+
+function localPostgresCommand() {
+  command="$1"
+
+  docker exec -it local_postgres psql -U postgres -c "$command"
+}
