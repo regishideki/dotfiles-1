@@ -68,8 +68,16 @@ function vaultNewJourneyDatabaseStagingAccess() {
   echo "string de conexão: postgres://$username:$password@db.api.journey.stg.creditas.io/journey"
 }
 
-function localPostgresCommand() {
+function dockerLocalPostgresCommand() {
   command="$1"
 
   docker exec -it local_postgres psql -U postgres -c "$command"
+}
+
+function gitMoveTagToCurrentCommit() {
+  tagName="$1"
+
+  git push origin :refs/tags/$tagName
+  git tag -fa $tagName
+  git push origin master --tags
 }
