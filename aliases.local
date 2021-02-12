@@ -36,19 +36,26 @@ alias sed="sed -E"
 cdtdevexec() {
   userCommand=$@
 
-  bash -c "aws-vault exec creditas-dev -- $userCommand"
+  _cdtExec 'creditas-dev' $userCommand
 }
 
 cdtstgexec() {
   userCommand=$@
 
-  bash -c "aws-vault exec creditas-staging -- $userCommand"
+  _cdtExec 'creditas-staging' $userCommand
 }
 
 cdtprodexec() {
   userCommand=$@
 
-  bash -c "aws-vault exec creditas-prod -- $userCommand"
+  _cdtExec 'creditas-prod' $userCommand
+}
+
+_cdtExec() {
+  awsProfile=$1
+  userCommand="${@:2}"
+
+  bash -c "aws-vault exec $awsProfile -- $userCommand"
 }
 
 gitmerge() {
