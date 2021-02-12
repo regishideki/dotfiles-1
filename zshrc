@@ -76,9 +76,15 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/regis/.sdkman"
-[[ -s "/home/regis/.sdkman/bin/sdkman-init.sh" ]] && source "/home/regis/.sdkman/bin/sdkman-init.sh"
-
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /snap/vault/1822/bin/vault vault
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/regishattori/Applications/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/regishattori/Applications/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/regishattori/Applications/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/regishattori/Applications/google-cloud-sdk/completion.zsh.inc'; fi
