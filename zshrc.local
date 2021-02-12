@@ -1,7 +1,10 @@
 export MAVEN_HOME=/Users/regishattori/apache-maven-3.5.4
 export PATH=$PATH:$MAVEN_HOME/bin
+source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 function addalias(){
   echo "alias $1=\"$2\"">>~/.aliases.local
   alias $1="$2"
 }
+
+export PATH=$PATH:~/.emacs.d/bin
