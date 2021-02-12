@@ -26,6 +26,18 @@ in zshrc.local there are already those lines of code:
 /usr/bin/xcape -e 'Caps_Lock=Escape' -t 100
 those commands will work this way: if you press Ctrl twice, it will act like Esc. If you hold, it will act like Ctrl:
 
+install emacs
+- install emacs-plus: https://github.com/d12frosted/homebrew-emacs-plus (last version installed = 27)
+  - it will be installed on /usr/local/opt/emacs-plus@27
+  - add the /bin folder to path:
+    export PATH=$PATH:/usr/local/opt/emacs-plus@27
+- install doom-emacs (there are some dependencies): https://github.com/d12frosted/homebrew-emacs-plus
+  - add to the path:
+    export PATH=$PATH:~/.emacs.d/bin
+- if you want to use org-roam
+  - install graphviz to see the graphs
+    brew install graphviz
+
 thoughtbot dotfiles
 ===================
 
