@@ -33,6 +33,24 @@ alias mdostaging="AUTH_HOST=https://auth-staging.creditas.com.br ORCHESTRATION_H
 
 alias sed="sed -E"
 
+cdtdevexec() {
+  userCommand=$@
+
+  bash -c "aws-vault exec creditas-dev -- $userCommand"
+}
+
+cdtstgexec() {
+  userCommand=$@
+
+  bash -c "aws-vault exec creditas-staging -- $userCommand"
+}
+
+cdtprodexec() {
+  userCommand=$@
+
+  bash -c "aws-vault exec creditas-prod -- $userCommand"
+}
+
 gitmerge() {
   git checkout $1
   git pull origin $1
