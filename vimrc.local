@@ -115,16 +115,16 @@ let g:tslime_always_current_window = 1
 vmap <C-c><C-c> <Plug>SendSelectionToTmux
 nmap <C-c><C-c> <Plug>NormalModeSendToTmux
 
-function! VimTestJourney()
-  let g:test#ruby#rspec#executable='docker-compose exec web bundle exec rspec'
+function! VimTestDocker()
+  let g:test#ruby#rspec#executable='docker-compose exec -e "RAILS_ENV=test" app rspec'
 endfunction
 
 function! VimTestCore()
-  let g:test#ruby#rspec#executable='rspec'
+  let g:test#ruby#rspec#executable='RAILS_ENV=test rspec'
 endfunction
 
-map <Leader>vtc :call VimTestCore()<CR>
-map <Leader>vtj :call VimTestJourney()<CR>
+map <Leader>vtl :call VimTestLocal()<CR>
+map <Leader>vtd :call VimTestDocker()<CR>
 
 nmap <C-c>r <Plug>SetTmuxVars
 
