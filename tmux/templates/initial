@@ -1,0 +1,10 @@
+#!/bin/bash
+
+tmux -2 new-session -d -s anotacoes
+tmux switch -t anotacoes
+cd
+cd workspace/regis/Dropbox/anotacoes
+
+tmux -2 new-session -d -s journey-v2
+tmux -2 new-session -d -s dotfiles
+tmux -2 new-session -d -s docker-dev

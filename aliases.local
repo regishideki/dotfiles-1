@@ -33,6 +33,31 @@ alias mdostaging="AUTH_HOST=https://auth-staging.creditas.com.br ORCHESTRATION_H
 
 alias sed="sed -E"
 
+cdtdevexec() {
+  userCommand=$@
+
+  _cdtExec 'creditas-dev' $userCommand
+}
+
+cdtstgexec() {
+  userCommand=$@
+
+  _cdtExec 'creditas-staging' $userCommand
+}
+
+cdtprodexec() {
+  userCommand=$@
+
+  _cdtExec 'creditas-prod' $userCommand
+}
+
+_cdtExec() {
+  awsProfile=$1
+  userCommand="${@:2}"
+
+  bash -c "aws-vault exec $awsProfile -- $userCommand"
+}
+
 gitmerge() {
   git checkout $1
   git pull origin $1
@@ -66,4 +91,18 @@ function vaultNewJourneyDatabaseStagingAccess() {
 
   echo $result
   echo "string de conexão: postgres://$username:$password@db.api.journey.stg.creditas.io/journey"
+}
+
+function dockerLocalPostgresCommand() {
+  command="$1"
+
+  docker exec -it local_postgres psql -U postgres -c "$command"
+}
+
+function gitMoveTagToCurrentCommit() {
+  tagName="$1"
+
+  git push origin :refs/tags/$tagName
+  git tag -fa $tagName
+  git push origin master --tags
 }

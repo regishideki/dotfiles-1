@@ -1,12 +1,15 @@
 export MAVEN_HOME=/Users/regishattori/apache-maven-3.5.4
 export PATH=$PATH:$MAVEN_HOME/bin
+source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 function addalias(){
   echo "alias $1=\"$2\"">>~/.aliases.local
   alias $1="$2"
 }
 
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH=$PATH:~/.emacs.d/bin
+

@@ -5,6 +5,7 @@
   loggraph = log --oneline --decorate --graph --all
   logdetail = log --pretty=format:'%C(yellow)%h%C(reset) - %an [%C(green)%ar%C(reset)] %s'
   loggrep = log -E -i --grep
+  logfile = !sh -c git log --all --full-history -- "$1"
   logstring = log -S
   logfile = log --
   stashall = stash -u
