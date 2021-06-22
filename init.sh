@@ -26,27 +26,18 @@ clone_from_projects() {
 
 workspace=~/workspace
 personal_workspace="$workspace/regis"
-bankfacil_workspace="$workspace/bankfacil"
 
 mkdir -p $personal_workspace
-mkdir -p $bankfacil_workspace
 
-config_projects=(dotfiles prelude)
 personal_projects=(programming-challenges presentations project_euler programming-languages)
-bankfacil_projects=(core provisioning front middle-office ember-cli-bkf-core provisioning-dev qa-functional-specs docker-dev journey journey-v2 terraform-applications loan-operation-kotlin simulations)
 
 personal_github="regishideki"
-bankfacil_github="Creditas"
 
 clone_from_projects $personal_workspace $personal_github $personal_projects
-clone_from_projects $bankfacil_workspace $bankfacil_github $bankfacil_projects
 clone_from_projects ~/ $personal_github $config_projects
 
 ln ~/dotfiles/zshrc.local $HOME/.zshrc.local
 ln ~/dotfiles/ideavimrc $HOME/.ideavimrc
-
-ln ~/dotfiles/core/projections.json $bankfacil_workspace/core/.projections.json
-ln ~/dotfiles/journey/projections.json $bankfacil_workspace/journey/.projections.json
 
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
   curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
