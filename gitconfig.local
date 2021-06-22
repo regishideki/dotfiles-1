@@ -12,3 +12,5 @@
   unstage = reset
   uncommit = reset --soft HEAD^
   cm = commit -m
+[pull]
+  ff = only
